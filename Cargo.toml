@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-cpal = { version = "0.15.3", features = ["oboe-shared-stdcxx"] }
+cpal = { version = "0.15.3" }
 uniffi = { version = "0.28.2", features = ["cli"] }
 jni = "0.21"
 ndk-context = "0.1"

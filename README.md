@@ -8,12 +8,6 @@ The library generates a simple one second sound of 440 Hz at half amplitude.
 ```rust
 cargo run --example beep
 ```
-## Uniffi bindings generator
-
-[Uniffi](https://github.com/mozilla/uniffi-rs) is a multi-language bindings generator for rust written by mozilla.
-
-We follow [the tutorial](https://mozilla.github.io/uniffi-rs/latest/Getting_started.html) using an udl file to expose the lib to Kotlin.
-
 ## Cargo ndk
 
 We use [cargo-ndk](https://github.com/bbqsrc/cargo-ndk) to compile Rust projects against the Android NDK without hassle.
@@ -33,6 +27,15 @@ rustup target add \
     x86_64-linux-android \
     i686-linux-android
 ```
+
+## Uniffi bindings generator
+
+[Uniffi](https://github.com/mozilla/uniffi-rs) is a multi-language bindings generator for rust written by mozilla.
+
+We follow [the tutorial](https://mozilla.github.io/uniffi-rs/latest/Getting_started.html) using an udl file to expose the lib to Kotlin.
+
+Build the libs with `./build.sh`, then build the android app in Android Studio.
+
 
 ## Reference
 

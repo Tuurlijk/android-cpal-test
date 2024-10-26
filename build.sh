@@ -8,13 +8,13 @@
 #    armv7-linux-androideabi \
 #    aarch64-linux-android
 
-cargo build --release
+cargo build
 
 cargo ndk -o ./app/src/main/jniLibs \
   --manifest-path ./Cargo.toml \
   -t x86 \
   -t x86_64 \
-  build --release
+  build
 
 #  -t armeabi-v7a \
 #  -t arm64-v8a \
