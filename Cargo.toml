@@ -4,7 +4,23 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-cpal = "0.15.3"
+cpal = { version = "0.15.3", features = ["oboe-shared-stdcxx"] }
+uniffi = { version = "0.28.2", features = ["cli"] }
+jni = "0.21"
+ndk-context = "0.1"
+libloading = "0.8.5"
 
 [[example]]
 name = "beep"
+
+[build-dependencies]
+uniffi = { version = "0.28.2", features = [ "build" ] }
+
+[lib]
+crate-type = ["cdylib"]
+name = "uniffi_androidcpaltest"
+
+[[bin]]
+# This can be whatever name makes sense for your project, but the rest of this tutorial assumes uniffi-bindgen.
+name = "uniffi-bindgen"
+path = "uniffi-bindgen.rs"
